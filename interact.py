@@ -141,7 +141,7 @@ def run():
             out_ids = sample_sequence(history, tokenizer, model, args)
         history.append(out_ids)
         history = history[-(2*args.max_history+1):]
-        out_text = tokenizer.decode(out_ids, skip_special_tokens=True)
+        out_text = tokenizer.decode(out_ids)
         print(out_text)
 
 
